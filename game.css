@@ -1,0 +1,42 @@
+.game-btn {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #007bff; /* Couleur bleue */
+  color: white;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.game-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(0);
+  transition: transform 0.3s;
+  z-index: 0;
+}
+
+.game-btn:hover::after {
+  transform: scale(1);
+}
+
+.game-btn:hover {
+  transform: scale(1.1); /* Agrandissement lors du survol */
+  background-color: #0056b3; /* Couleur plus foncée lors du survol */
+}
+
+.game-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+#see-more-btn {
+  margin-top: 50px; /* Ajuste la valeur pour plus ou moins d'espace */
+}
